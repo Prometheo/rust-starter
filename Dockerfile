@@ -17,4 +17,4 @@ RUN cargo chef cook --release --recipe-path recipe.json
 COPY . ./
 RUN cargo build --release
 
-CMD ["./target/release/helloworld"]
+CMD ["./target/release/rust-starter"]
