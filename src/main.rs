@@ -39,7 +39,7 @@ async fn main() {
         .expect("failed to convert to number");
 
     // We then create a socket address, listening on [::]:PORT (IPv6 binding)
-    let ipv6 = SocketAddr::from(([0,0,0,0,0,0,0,0], port));
+    let ipv6 = SocketAddr::from(([0, 0, 0, 0], port));
     // Bind the socket address to a TCP listener which listens for requests
     let ipv6_listener = TcpListener::bind(&ipv6).await.unwrap();
 
