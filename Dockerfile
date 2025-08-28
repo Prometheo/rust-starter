@@ -17,4 +17,11 @@ RUN cargo chef cook --release --recipe-path recipe.json
 COPY . ./
 RUN cargo build --release
 
+ENV RUST_LOG=info \
+    PORT=3000 \
+    ENVIRONMENT=production
+
+# Expose default port (configurable via ENV)
+EXPOSE 3000
+
 ENTRYPOINT ["./target/release/rust-starter"]
